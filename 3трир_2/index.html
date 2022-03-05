@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="total">
-      <div class="results">
-        <div class="comp-res res-block">
-          <div>Computer:</div>
-          <div>-</div>
-        </div>
-        <div class="user-res res-block">
-          <div>User:</div>
-          <div>-</div>
-        </div>
-      </div>
-      <div class="game-block">
-        <div class="display" id="display">
-          <div class="bubble bubble-bottom-left" id="user1" contenteditable>
-            <div style="color: black; font-size: 15px; font-weight: 600">
-              User
+        <div class="results">
+            <div class="comp-res res-block">
+                <div>Computer:</div>
+                <div>-</div>
             </div>
-            <i style="color: black" class="fa-solid fa-hand-scissors"></i>
-          </div>
-          <div class="res-message">Ничья</div>
-          <div class="bubble bubble-bottom-right" id="comp1" contenteditable>
-            <div style="color: black; font-size: 15px; font-weight: 600">
-              Computer
+            <div class="user-res res-block">
+                <div>User:</div>
+                <div>-</div>
             </div>
-            <i style="color: black" class="fa-solid fa-hand-scissors"></i>
-          </div>
         </div>
-        <div class="tool-btns">
-          <button id="btn-s" value="s" class="btn-tool btn-s">
+        <div class="game-block">
+            <div class="display" id="display">
+                <div class="bubble bubble-bottom-left" id="user1" contenteditable>
+                    <div style="color: black; font-size: 15px; font-weight: 600">
+                        User
+                    </div>
+                    <!-- <i style="color: black" class="fa-solid fa-hand-scissors"></i> -->
+                </div>
+                <div class="bubble" id="mess">
+                    <div style="color: black; font-size: 15px; font-weight: 600">
+                        Результат
+                    </div>
+                </div>
+                <!-- <div id="res-message">Ничья</div> -->
+                <div class="bubble bubble-bottom-right" id="comp1" contenteditable>
+                    <div style="color: black; font-size: 15px; font-weight: 600">
+                        Computer
+                    </div>
+                    <!-- <i style="color: black" class="fa-solid fa-hand-scissors"></i> -->
+                </div>
+            </div>
+            <div class="tool-btns">
+                <button id="btn-s" value="s" class="btn-tool btn-s">
             <i class="fa-solid fa-hand-scissors"></i>
           </button>
-          <button id="btn-r" value="r" class="btn-tool btn-r">
+                <button id="btn-r" value="r" class="btn-tool btn-r">
             <i class="fa-solid fa-hand-back-fist"></i>
           </button>
-          <button id="btn-p" value="p" class="btn-tool btn-p">
+                <button id="btn-p" value="p" class="btn-tool btn-p">
             <i class="fa-solid fa-hand"></i>
           </button>
+            </div>
         </div>
-      </div>
     </div>
     <script src="./scripts/main.js"></script>
-  </body>
+</body>
+
 </html>

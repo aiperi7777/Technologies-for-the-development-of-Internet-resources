@@ -81,8 +81,8 @@ i {
 }
 
 .mess-1 {
-    font-size: 12px;
-    margin: 12px;
+    font-size: 16px;
+    margin: 5px;
 }
 
 
@@ -111,12 +111,3 @@ i {
     left: 32px;
     bottom: -24px;
 } */
-
-.res-message {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 25px;
-    font-weight: 600;
-}

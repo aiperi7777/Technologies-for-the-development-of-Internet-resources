@@ -1,8 +1,4 @@
-let btnS = document.getElementById("btn-s"); // 1-scissors 2-paper 3-rock
-let btnR = document.getElementById("btn-r");
-let btnP = document.getElementById("btn-p");
-let display = document.getElementById("display");
-let mess = document.getElementById("mess")
+// 1-scissors 2-paper 3-rock
 let compWinCount = 0,
     userWinCount = 0,
     totalWinUser = 0,
@@ -14,44 +10,44 @@ let rools = [
     { item: 3, weaker: 2, stronger: 1 },
 ];
 
-btnS.addEventListener("click", function(e) {
+document.getElementById("btn-s").addEventListener("click", function(e) {
     start(1);
 });
-btnP.addEventListener("click", function(e) {
+document.getElementById("btn-r").addEventListener("click", function(e) {
     start(2);
 });
-btnR.addEventListener("click", function(e) {
+document.getElementById("btn-p").addEventListener("click", function(e) {
     start(3);
 });
 
 function start(user) {
+    let color = "#" + Math.floor(Math.random() * 16777215).toString(16);
     let computer = Math.floor(Math.random() * 3) + 1;
     getRes(user, computer);
-    render(user, "user1")
-    render(computer, "comp1")
-    mess.innerHTML += `<div style="color:black" class="mess-1">${message}</div>`
+    render(user, "user1", color)
+    render(computer, "comp1", color)
+    document.getElementById("mess").innerHTML += `<div style="color:${color}" class="mess-1">${message}</div>`
 }
 
-function render(value, id) {
+function render(value, id, color) {
     switch (value) {
         case 1:
-            document.getElementById(id).innerHTML += `<div><i class="fa-solid fa-hand-scissors"></i></div>`
+            document.getElementById(id).innerHTML += `<div><i style="color:${color}" class="fa-solid fa-hand-scissors"></i></div>`
             break;
         case 2:
-            document.getElementById(id).innerHTML += `<div><i class="fa-solid fa-hand"></i></div>`
+            document.getElementById(id).innerHTML += `<div><i style="color:${color}" class="fa-solid fa-hand"></i></div>`
             break;
-            q
         case 3:
-            document.getElementById(id).innerHTML += `<div><i class="fa-solid fa-hand-back-fist"></i></div>`
+            document.getElementById(id).innerHTML += `<div><i style="color:${color}" class="fa-solid fa-hand-back-fist"></i></div>`
             break;
     }
 }
 
 function counter(count, total) {
-    if (count == 3) {
-        total++;
-        count = 0;
+    if (count > 3) {
+        total = Math.floor(count / 3)
     }
+    return total
 }
 
 function getRes(user, comp) {
@@ -60,12 +56,18 @@ function getRes(user, comp) {
             switch (user) {
                 case i.weaker:
                     userWinCount++;
-                    counter(userWinCount, totalWinUser)
+                    console.log("user")
+                    console.log(userWinCount)
+                    totalWinUser = counter(userWinCount, totalWinUser)
+                    document.getElementById("user-res").innerText = totalWinUser
                     message = "Пользователь победил";
                     break;
                 case i.stronger:
                     compWinCount++;
-                    counter(compWinCount, totalWinComp)
+                    console.log("comp")
+                    console.log(compWinCount)
+                    totalWinComp = counter(compWinCount, totalWinComp)
+                    document.getElementById("comp-res").innerText = totalWinComp
                     message = "Компьютер победил";
                     break;
                 case i.item:

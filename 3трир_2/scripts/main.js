@@ -44,7 +44,7 @@ function render(value, id, color) {
 }
 
 function counter(count, total) {
-    if (count > 3) total = Math.floor(count / 3)
+    if (count >= 3) total = Math.floor(count / 3)
     return total
 }
 

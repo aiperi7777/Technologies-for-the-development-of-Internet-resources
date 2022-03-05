@@ -44,9 +44,7 @@ function render(value, id, color) {
 }
 
 function counter(count, total) {
-    if (count > 3) {
-        total = Math.floor(count / 3)
-    }
+    if (count > 3) total = Math.floor(count / 3)
     return total
 }
 
@@ -56,16 +54,12 @@ function getRes(user, comp) {
             switch (user) {
                 case i.weaker:
                     userWinCount++;
-                    console.log("user")
-                    console.log(userWinCount)
                     totalWinUser = counter(userWinCount, totalWinUser)
                     document.getElementById("user-res").innerText = totalWinUser
                     message = "Пользователь победил";
                     break;
                 case i.stronger:
                     compWinCount++;
-                    console.log("comp")
-                    console.log(compWinCount)
                     totalWinComp = counter(compWinCount, totalWinComp)
                     document.getElementById("comp-res").innerText = totalWinComp
                     message = "Компьютер победил";

@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Almendra+SC&display=swap");
+body {
+    background-color: rgb(255, 203, 180);
+}
+
+h1 {
+    font-family: "Almendra SC", serif;
+    color: rgb(32, 0, 136);
+    font-size: 80px;
+    font-weight: 900;
+}
+
+.intro {
+    display: flex;
+}
+
+img {
+    width: 580px;
+    /* height: 480px;   */
+}
+.intro__text {
+    padding: 70px 35px;
+    margin-bottom: 90px;
+    font-size: 40px;
+    font-family: "Almendra SC", serif;
+    font-style: italic;
+    color: rgb(107, 192, 23);
+    font-weight: 700;
+   text-align: center;
+}
+.text{
+    color: blueviolet;
+    text-decoration: underline;
+    font-size: 59px;
+    font-weight: 700;
+}
+h3 {
+    color: blueviolet;
+    text-decoration: underline;
+    font-size: 59px;
+    font-weight: 700;
+}
+#text-1 {
+    color: brown;
+   font-style: italic;
+    font-size: 40px;
+    font-weight: 800;
+    margin-left: 20px;
+}
+#text-2 {
+    margin-top: 40px;
+    margin-left: 20px;
+    color: crimson;
+    font-size: 40px;
+    font-weight: 800;
+}

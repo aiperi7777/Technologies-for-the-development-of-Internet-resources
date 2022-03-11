@@ -110,3 +110,14 @@ i {
     font-size: 16px;
     margin: 5px;
 }
+
+
+/* .res-block {
+    width: 600px;
+    padding: 7px;
+    border: 3px solid white;
+} */
+
+.res-render {
+    padding: 7px;
+}

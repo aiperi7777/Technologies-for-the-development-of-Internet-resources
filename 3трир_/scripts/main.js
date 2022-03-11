@@ -31,19 +31,19 @@ function start(user) {
     getRes(user, computer);
     render(user, "user1", color)
     render(computer, "comp1", color)
-    document.getElementById("mess").innerHTML += `<div style="color:${color}" class="mess-1">${message}</div>`
+    document.getElementById("mess").innerHTML += `<div style="color:${color}" class="mess-1 res-render">${message}</div>`
 }
 
 function render(value, id, color) {
     switch (value) {
         case 1:
-            document.getElementById(id).innerHTML += `<div><i style="color:${color}" class="fa-solid fa-hand-scissors"></i></div>`
+            document.getElementById(id).innerHTML += `<div class="res-render"><i style="color:${color}" class="fa-solid fa-hand-scissors"></i></div>`
             break;
         case 2:
-            document.getElementById(id).innerHTML += `<div><i style="color:${color}" class="fa-solid fa-hand"></i></div>`
+            document.getElementById(id).innerHTML += `<div class="res-render"><i style="color:${color}" class="fa-solid fa-hand"></i></div>`
             break;
         case 3:
-            document.getElementById(id).innerHTML += `<div><i style="color:${color}" class="fa-solid fa-hand-back-fist"></i></div>`
+            document.getElementById(id).innerHTML += `<div class="res-render"><i style="color:${color}" class="fa-solid fa-hand-back-fist"></i></div>`
             break;
     }
 }

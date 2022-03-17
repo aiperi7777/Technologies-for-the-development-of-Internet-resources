@@ -18,6 +18,7 @@ img {
     width: 580px;
     /* height: 480px;   */
 }
+
 .intro__text {
     padding: 70px 35px;
     margin-bottom: 90px;
@@ -26,28 +27,34 @@ img {
     font-style: italic;
     color: rgb(107, 192, 23);
     font-weight: 700;
-   text-align: center;
+    text-align: center;
 }
-.text{
+
+.text {
     color: blueviolet;
     text-decoration: underline;
     font-size: 59px;
     font-weight: 700;
 }
+
 h3 {
     color: blueviolet;
     text-decoration: underline;
     font-size: 59px;
     font-weight: 700;
 }
+
 #text-1 {
     color: brown;
-   font-style: italic;
+    font-style: italic;
     font-size: 40px;
     font-weight: 800;
     margin-left: 20px;
 }
+
 #text-2 {
+    /* display: flex; */
+    text-align: justify;
     margin-top: 40px;
     margin-left: 20px;
     color: crimson;

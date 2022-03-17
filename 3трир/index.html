@@ -1,0 +1,94 @@
+<!--20ВП1/Кубанычбекова Айпери/Лабораторная работа №3/Вариант 11 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <div class="main-total">
+      <h2>«Камень, ножницы, бумага»</h2>
+      <div class="inp">
+        <div class="render">
+          <div>
+            <div
+              class="bubble bubble-bottom-left"
+              id="user1"
+              contenteditable
+            ></div>
+            <div
+              class="bubble bubble-bottom-left"
+              id="user2"
+              contenteditable
+            ></div>
+            <div
+              class="bubble bubble-bottom-left"
+              id="user3"
+              contenteditable
+            ></div>
+          </div>
+          <div>
+            <div
+              class="bubble bubble-bottom-right"
+              id="comp1"
+              contenteditable
+            ></div>
+            <div
+              class="bubble bubble-bottom-right"
+              id="comp2"
+              contenteditable
+            ></div>
+            <div
+              class="bubble bubble-bottom-right"
+              id="comp3"
+              contenteditable
+            ></div>
+          </div>
+        </div>
+        <div class="tools">
+          <button id="btn-s" value="s" class="btn-tool btn-s">
+            <i class="fa-solid fa-hand-scissors"></i>
+          </button>
+          <button id="btn-r" value="r" class="btn-tool btn-r">
+            <i class="fa-solid fa-hand-back-fist"></i>
+          </button>
+          <button id="btn-p" value="p" class="btn-tool btn-p">
+            <i class="fa-solid fa-hand"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="total">
+        <div class="user-result">
+          <div>User</div>
+          <div class="first-users-choice choice"></div>
+          <div class="second-users-choice choice"></div>
+          <div class="third-users-choice choice"></div>
+        </div>
+        <div class="computer-result">
+          <div>Computer</div>
+          <div class="first-computer-choice choice">jj</div>
+          <div class="second-computer-choice choice"></div>
+          <div class="third-computer-choice choice"></div>
+        </div>
+        <div class="result">
+          <div>Result</div>
+          <div class="first-result choice"></div>
+          <div class="second-result choice"></div>
+          <div class="third-result choice"></div>
+        </div>
+      </div>
+    </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

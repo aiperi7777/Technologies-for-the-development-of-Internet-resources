@@ -1,125 +1,78 @@
-let user1Render=document.getElementById("user1")
-let user2Render=document.getElementsByClassName("user2")
-let user3Render=document.getElementsByClassName("user3")
-let comp1Render=document.getElementById("comp1")
-let comp2Render=document.getElementById("comp2")
-let comp3Render=document.getElementById("comp3")
-let btnS=document.getElementById("btn-s");
-let btnR=document.getElementById("btn-r");
-let btnP=document.getElementById("btn-p");
-let user;
-let comp
-let perem=0
+// 1-scissors 2-paper 3-rock
+let compWinCount = 0,
+    userWinCount = 0,
+    totalWinUser = 0,
+    totalWinComp = 0;
+let message = "";
+let rools = [
+    { item: 1, weaker: 3, stronger: 2 },
+    { item: 2, weaker: 1, stronger: 3 },
+    { item: 3, weaker: 2, stronger: 1 },
+];
 
-function getParams(num,user){
- switch(num){
-     case 1:
-        start(".first-computer-choice",".first-users-choice",user,".first-result","comp1","user1")
-        break;
-     case 2:
-        start(".second-computer-choice",".second-users-choice",user,".second-result","comp2","user2")
-        break;
-     case 3:
-        start(".third-computer-choice",".third-users-choice",user,".third-result","comp3","user3")
-        break;
-    case 4:
-        document.getElementsByClassName("total")[0].style.display="flex";
-    default: 
- }
+document.getElementById("btn-s").addEventListener("click", function(e) {
+    start(1);
+});
+document.getElementById("btn-r").addEventListener("click", function(e) {
+    start(2);
+});
+document.getElementById("btn-p").addEventListener("click", function(e) {
+    start(3);
+});
+document.getElementById("clear").addEventListener("click", function(e) {
+    document.getElementById("user1").innerHTML = ""
+    document.getElementById("comp1").innerHTML = ""
+    document.getElementById("mess").innerHTML = ""
+});
+
+function start(user) {
+    let color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+    let computer = Math.floor(Math.random() * 3) + 1;
+    getRes(user, computer);
+    render(user, "user1", color)
+    render(computer, "comp1", color)
+    document.getElementById("mess").innerHTML += `<div style="color:${color}" class="mess-1 res-render">${message}</div>`
 }
-btnS.addEventListener('click',function(e){
-    perem++
-    user="ножницы";
-    getParams(perem,user)
-    
-})
 
-btnR.addEventListener('click',function(e){
-    perem++
-    user="камень";
-    getParams(perem,user)
-})
-btnP.addEventListener('click',function(e){
-    perem++
-    user="бумага";
-    getParams(perem,user)
-})
-    
-    function start(classComp,classUser,user,res,classN,classM){
-
-        console.log(user)
-        console.log(classUser)
-        console.log(classComp)
-        document.querySelector(classUser).innerHTML = user;
-        let computer = Math.floor(Math.random() * 3) + 1;
-        let fUC=document.querySelectorAll(classUser)
-        fUC.innerHTML = user;
-    switch (computer) {
+function render(value, id, color) {
+    switch (value) {
         case 1:
-            document.querySelector(classComp).innerHTML = "ножницы";
-            document.getElementById(classN).innerHTML+='<i class="fa-solid fa-hand-scissors"></i>'
-            // comp1Render[0].style.display="block";
-            document.getElementById(classN).style.display="block"
-        break;
+            document.getElementById(id).innerHTML += `<div class="res-render"><i style="color:${color}" class="fa-solid fa-hand-scissors"></i></div>`
+            break;
         case 2:
-            document.querySelector(classComp).innerHTML = "бумага";
-            document.getElementById(classN).innerHTML+='<i class="fa-solid fa-hand"></i>'
-            document.getElementById(classN).style.display="block"
-            // comp1Render[0].style.display="block";
+            document.getElementById(id).innerHTML += `<div class="res-render"><i style="color:${color}" class="fa-solid fa-hand"></i></div>`
             break;
         case 3:
-            document.querySelector(classComp).innerHTML = "камень";
-            document.getElementById(classN).innerHTML+='<i class="fa-solid fa-hand-back-fist"></i>'
-            document.getElementById(classN).style.display="block"
-            // comp1Render[0].style.display="block";
+            document.getElementById(id).innerHTML += `<div class="res-render"><i style="color:${color}" class="fa-solid fa-hand-back-fist"></i></div>`
             break;
-    }
-    switch (user) {
-        case 'ножницы':
-            document.getElementById(classM).innerHTML+='<i class="fa-solid fa-hand-scissors"></i>'
-            // comp1Render[0].style.display="block";
-            document.getElementById(classM).style.display="block"
-        break;
-        case 'бумага':
-            document.getElementById(classM).innerHTML+='<i class="fa-solid fa-hand"></i>'
-            document.getElementById(classM).style.display="block"
-            // comp1Render[0].style.display="block";
-            break;
-        case 'камень':
-            document.getElementById(classM).innerHTML+='<i class="fa-solid fa-hand-back-fist"></i>'
-            document.getElementById(classM).style.display="block"
-            // comp1Render[0].style.display="block";
-            break;
-    }
-    let comp=document.querySelector(classComp).innerHTML ;
-    toCompare(user,comp,res)
-}
-
-function toCompare(user, computer,res) {
-    if (user == computer) {
-        document.querySelector(res).innerHTML = "ничья";
-    } else if (user == "камень") {
-        if (computer == "ножницы") {
-            document.querySelector(res).innerHTML = "вы выиграли";
-        } else {
-            document.querySelector(res).innerHTML =
-                "компьютер выиграл";
-        }
-    } else if (user === "бумага") {
-        if (computer === "камень") {
-            document.querySelector(res).innerHTML = "вы выиграли";
-        } else {
-            document.querySelector(res).innerHTML =
-                "компьютер выиграл";
-        }
-    } else if (user === "ножницы") {
-        if (computer === "бумага") {
-            document.querySelector(res).innerHTML = "вы выиграли";
-        } else {
-            document.querySelector(res).innerHTML =
-                "компьютер выиграл";
-        }
     }
 }
 
+function counter(count, total) {
+    if (count >= 3) total = Math.floor(count / 3)
+    return total
+}
 
+function getRes(user, comp) {
+    rools.forEach((i) => {
+        if (i.item === comp) {
+            switch (user) {
+                case i.weaker:
+                    userWinCount++;
+                    totalWinUser = counter(userWinCount, totalWinUser)
+                    document.getElementById("user-res").innerText = totalWinUser
+                    message = "Пользователь победил";
+                    break;
+                case i.stronger:
+                    compWinCount++;
+                    totalWinComp = counter(compWinCount, totalWinComp)
+                    document.getElementById("comp-res").innerText = totalWinComp
+                    message = "Компьютер победил";
+                    break;
+                case i.item:
+                    message = "Ничья";
+                    break;
+            }
+        }
+    });
+}

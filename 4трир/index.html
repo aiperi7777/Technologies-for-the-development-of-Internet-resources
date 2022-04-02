@@ -1,0 +1,448 @@
+<!--20ВП1/Кубанычбекова Айпери/Лабораторная работа №4/Вариант 11 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/planet.css" />
+    <link rel="stylesheet" href="./styles/table.css" />
+</head>
+
+<body>
+    <div id="total" style="display: block">
+        <div class="ct" id="t1">
+            <div class="ct" id="t0">
+                <div class="ct" id="t2">
+                    <div class="ct" id="t3">
+                        <div class="ct" id="t4">
+                            <div class="ct" id="t5">
+                                <div class="ct" id="t6">
+                                    <div class="ct" id="t7">
+                                        <div class="ct" id="t8">
+                                            <div class="ct" id="t9">
+                                                <div class="ct" id="t10">
+                                                    <ul id="menu">
+                                                        <div>
+                                                            <li>
+                                                                <a id="1q" href="#t0" class="btn-1">1 Задание</a
+                                  >
+                                </li>
+                                <li>
+                                  <a id="2q" href="#t2" class="btn-1"
+                                    >2 Задание</a
+                                  >
+                                </li>
+                                <li>
+                                  <a id="3q" href="#t3" class="btn-1"
+                                    >3 Задание</a
+                                  >
+                                </li>
+                                <li>
+                                  <a id="4q" href="#t4" class="btn-1"
+                                    >4 Задание</a
+                                  >
+                                </li>
+                                <li>
+                                  <a id="5q" href="#t5" class="btn-1"
+                                    >5 Задание</a
+                                  >
+                                </li>
+                              </div>
+                              <div>
+                                <li>
+                                  <a id="6q" href="#t6" class="btn-1"
+                                    >6 Задание</a
+                                  >
+                                </li>
+                                <li>
+                                  <a id="7q" href="#t7" class="btn-1"
+                                    >7 Задание</a
+                                  >
+                                </li>
+                                <li>
+                                  <a id="8q" href="#t8" class="btn-1"
+                                    >8 Задание</a
+                                  >
+                                </li>
+                                <li>
+                                  <a id="9q" href="#t9" class="btn-1"
+                                    >9 Задание</a
+                                  >
+                                </li>
+                                <li>
+                                  <a id="10q" href="#t10" class="btn-1"
+                                    >10 Задание</a
+                                  >
+                                </li>
+
+                                <li id="time" class="btn-1"></li>
+                                <li class="button-1" onclick="getResults()">
+                                  <!-- <a href="results.html"> -->
+                                  Завершить
+                                  <!-- </a> -->
+                                                            </li>
+                                                        </div>
+                                                    </ul>
+                                                    <div class="page" id="p1">
+                                                        <div class="content">
+                                                            <div class="planet">
+                                                                <div class="ring"></div>
+                                                                <div class="cover-ring"></div>
+                                                                <div class="spots">
+                                                                    <span></span>
+                                                                    <span></span>
+                                                                    <span></span>
+                                                                    <span></span>
+                                                                    <span></span>
+                                                                    <span></span>
+                                                                    <span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="page set-total" id="p0">
+                                                        <h2>
+                                                            Как называется неизменная скорость,<br /> с которой расширяется Вселенная?
+                                                        </h2>
+                                                        <div>
+                                                            <input name="flexRadioDefault" class="form-check-input" type="radio" id="flexRadioDefault1" value="Постоянная Планка" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault1">
+                                  Постоянная Планка
+                                </label>
+                                                        </div>
+                                                        <div>
+                                                            <input name="flexRadioDefault" class="form-check-input" type="radio" id="flexRadioDefault1" value="Постоянная Хабла" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault1">
+                                  Постоянная Хабла*
+                                </label>
+                                                        </div>
+                                                        <div>
+                                                            <input name="flexRadioDefault" class="form-check-input" type="radio" id="flexRadioDefault1" value=" Константа Кеплера" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault1">
+                                  Константа Кеплера
+                                </label>
+                                                        </div>
+                                                        <div>
+                                                            <input name="flexRadioDefault" class="form-check-input" type="radio" id="flexRadioDefault1" value="Скорость расширения" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault1">
+                                  Скорость расширения
+                                </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="page set-total" id="p2">
+                                                        <h2>Выберите верные утверждения</h2>
+                                                        <input id="ans2" type="checkbox" name="q4" value="Линия вокруг которой вращается небесная сфера называется ось мира" />Линия вокруг которой вращается небесная сфера называется ось мира+<br />
+                                                        <input id="ans2" type="checkbox" name="q4" value="Второй от Солнца планета называется Меркурий" />Второй от Солнца планета называется Меркурий<br />
+                                                        <input id="ans2" type="checkbox" name="q4" value="Межзвездный пространство-заполнен пылью и газом" /> Межзвездный пространство-заполнен пылью и газом +
+                                                        <br />
+                                                        <input id="ans2" type="checkbox" name="q4" value="Обратное движение точки весеннего равноденствия называется Перигелий" /> Обратное движение точки весеннего равноденствия называется Перигелий<br
+                                                        />
+                                                    </div>
+                                                    <div class="page set-total" id="p3">
+                                                        <h2>Гравитационные волны - это</h2>
+                                                        <select style="
+                                  background-color: #00000000;
+                                  color: white;
+                                  width: 600px;
+                                " class="form-select drop" id="3ans" aria-label="Default select example">
+                                <option
+                                  style="
+                                    background-color: #00000000;
+                                    color: black;
+                                  "
+                                  selected
+                                >
+                                  Выберите один ответ
+                                </option>
+                                <option
+                                  style="
+                                    background-color: #00000000;
+                                    color: black;
+                                  "
+                                  value="Длинноволновые возмущения электромагнитного спектра"
+                                >
+                                  Длинноволновые возмущения электромагнитного
+                                  спектра
+                                </option>
+                                <option
+                                  style="
+                                    background-color: #00000000;
+                                    color: black;
+                                  "
+                                  value="Оптическая иллюзия,дублирующая изображения далеких обьектов"
+                                >
+                                  Оптическая иллюзия,дублирующая изображения
+                                  далеких обьектов
+                                </option>
+                                <option
+                                  style="
+                                    background-color: #00000000;
+                                    color: black;
+                                  "
+                                  value="Рябь на ткани пространства-времени"
+                                >
+                                  Рябь на ткани пространства-времени *
+                                </option>
+                                <option value="Артефакты ранней Вселенной">
+                                  Артефакты ранней Вселенной
+                                </option>
+                              </select>
+                                                    </div>
+                                                    <div class="page set-total" id="p4">
+                                                        <h2>
+                                                            Как называется современная <br /> стандартная космологическая модель?
+                                                        </h2>
+                                                        <div>
+                                                            <input name="flexRadioDefault4" class="form-check-input" type="radio" id="flexRadioDefault4" value="Циклическая модель" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault4">
+                                  Циклическая модель
+                                </label>
+                                                        </div>
+                                                        <div>
+                                                            <input name="flexRadioDefault4" class="form-check-input" type="radio" id="flexRadioDefault4" value="Стационарная Вселенная" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault4">
+                                  Стационарная Вселенная
+                                </label>
+                                                        </div>
+                                                        <div>
+                                                            <input name="flexRadioDefault4" class="form-check-input" type="radio" id="flexRadioDefault4" value="Модель де Ситтера" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault4">
+                                  Модель де Ситтера
+                                </label>
+                                                        </div>
+                                                        <div>
+                                                            <input name="flexRadioDefault4" class="form-check-input" type="radio" id="flexRadioDefault4" value="Модель Лямбда-CDM" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault4">
+                                  Модель Лямбда-CDM*
+                                </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="page set-total" id="p5">
+                                                        <h2>
+                                                            В виде чего закончат свое существование Солнце
+                                                            <br />и другие желтые карлики?
+                                                        </h2>
+                                                        <div>
+                                                            <input name="flexRadioDefault5" class="form-check-input" type="radio" id="flexRadioDefault5" value="Нейтронная звезда" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault5">
+                                  Нейтронная звезда
+                                </label>
+                                                        </div>
+                                                        <div>
+                                                            <input name="flexRadioDefault5" class="form-check-input" type="radio" id="flexRadioDefault5" value="Черная дыра" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault5">
+                                  Черная дыра
+                                </label>
+                                                        </div>
+                                                        <div>
+                                                            <input name="flexRadioDefault5" class="form-check-input" type="radio" id="flexRadioDefault5" value="Красный карлик" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault5">
+                                  Красный карлик
+                                </label>
+                                                        </div>
+                                                        <div>
+                                                            <input name="flexRadioDefault5" class="form-check-input" type="radio" id="flexRadioDefault5" value="Белый карлик" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault5">
+                                  Белый карлик*
+                                </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="page set-total" id="p6">
+                                                        <h2>
+                                                            Как звали ученого,которого часто называют<br /> "отцом Большого взрыва"?
+                                                        </h2>
+                                                        <select style="
+                                  background-color: #00000000;
+                                  color: white;
+                                  width: 600px;
+                                " class="form-select drop" id="6ans" aria-label="Default select example">
+                                <option
+                                  style="
+                                    background-color: #00000000;
+                                    color: black;
+                                  "
+                                  selected
+                                >
+                                  Выберите один ответ
+                                </option>
+                                <option
+                                  style="
+                                    background-color: #00000000;
+                                    color: black;
+                                  "
+                                  value="Николай Коперник"
+                                >
+                                  Николай Коперник
+                                </option>
+                                <option
+                                  style="
+                                    background-color: #00000000;
+                                    color: black;
+                                  "
+                                  value="Альберт Энштейн"
+                                >
+                                  Альберт Энштейн
+                                </option>
+                                <option
+                                  style="
+                                    background-color: #00000000;
+                                    color: black;
+                                  "
+                                  value="Эдвин Хаббл"
+                                >
+                                  Эдвин Хаббл
+                                </option>
+                                <option
+                                  style="
+                                    background-color: #00000000;
+                                    color: black;
+                                  "
+                                  value="Жорж Леметр"
+                                >
+                                  Жорж Леметр*
+                                </option>
+                              </select>
+                                                    </div>
+                                                    <div class="page set-total" id="p7">
+                                                        <h2>
+                                                            С какой галактикой столкнется Млечный Путь через 4 млрд лет?
+                                                        </h2>
+                                                        <div>
+                                                            <input name="flexRadioDefault7" class="form-check-input" type="radio" id="flexRadioDefault7" value="Большое Мегалланово облако" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault7">
+                                  Большое Мегалланово облако
+                                </label>
+                                                        </div>
+
+                                                        <div>
+                                                            <input name="flexRadioDefault7" class="form-check-input" type="radio" id="flexRadioDefault7" value="Галактика Треугольника" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault7">
+                                  Галактика Треугольника
+                                </label>
+                                                        </div>
+                                                        <div>
+                                                            <input name="flexRadioDefault7" class="form-check-input" type="radio" id="flexRadioDefault7" value="Карликовая галактика в Большом Псе" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault7">
+                                  Карликовая галактика в Большом Псе
+                                </label>
+                                                        </div>
+
+                                                        <div>
+                                                            <input name="flexRadioDefault7" class="form-check-input" type="radio" id="flexRadioDefault7" value="Галактика Андромеда" />
+                                                            <label id="answer" class="form-check-label" for="flexRadioDefault7">
+                                  Галактика Андромеда*
+                                </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="page set-total" id="p8">
+                                                        <h2>
+                                                            В каком году нобелевский лауреат Сол Перлмуттер
+                                                            <br />и его коллеги открыли ускорение расширения Вселенной?
+                                                        </h2>
+                                                        <p>1998г*</p>
+                                                        <input type="number" id="8ans" />
+                                                    </div>
+                                                    <div class="page set-total" id="p9">
+                                                        <h2>
+                                                            Как называется сверхмассивная черная дыра,<br /> находящаяся в самом центре Млечного Пути?
+                                                        </h2>
+                                                        Стрелец A*
+                                                        <input type="text" id="9ans" />
+                                                    </div>
+                                                    <div class="page set-total" id="p10">
+                                                        <h2>
+                                                            Как называется часть черной дыры,<br />после пересечения которой уже буквально нет пути назад?
+                                                        </h2>
+                                                        <select style="
+                                  background-color: #00000000;
+                                  color: white;
+                                  width: 600px;
+                                " class="form-select 10ans" id="10ans" aria-label="Default select example">
+                                <option
+                                  style="
+                                    background-color: #00000000;
+                                    color: black;
+                                  "
+                                  selected
+                                >
+                                  Выберите один ответ
+                                </option>
+                                <option
+                                  style="
+                                    background-color: #00000000;
+                                    color: black;
+                                  "
+                                  value="Предел Бекенштейна"
+                                >
+                                  Предел Бекенштейна
+                                </option>
+                                <option
+                                  style="
+                                    background-color: #00000000;
+                                    color: black;
+                                  "
+                                  value="Горизонт событий"
+                                >
+                                  Горизонт событий*
+                                </option>
+                                <option
+                                  style="
+                                    background-color: #00000000;
+                                    color: black;
+                                  "
+                                  value="Предел Чандрасекара"
+                                >
+                                  Предел Чандрасекара
+                                </option>
+                                <option value="Граница Ландауэра">
+                                  Граница Ландауэра
+                                </option>
+                              </select>
+                                                    </div>
+                                                    <div class="sky">
+                                                        <div class="stars2"></div>
+                                                        <div class="shooting-stars"></div>
+                                                        <div class="shooting-stars2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="mytable" style="display: none">
+        <h1>Результаты тестирования</h1>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Правильный ответ</th>
+                        <th>Ваш ответ</th>
+                        <th id="timer-res"></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody id="mytbody"></tbody>
+            </table>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
